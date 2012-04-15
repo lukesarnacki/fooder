@@ -9,4 +9,7 @@ group :development, :test do
   gem 'ruby-debug-base19', '0.11.26'
   gem 'ruby-debug19', :require => 'ruby-debug'
   gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'database_cleaner', '0.6.7'
+  gem 'ffaker'
 end
