@@ -3,10 +3,15 @@ class ProductsController < ApplicationController
   respond_to :json, :xml
 
   def index
-    #Api::Collection
+    respond_with Api::Collection.new(Product.all, Product)
   end
 
   def show
     respond_with Api::Product.find(params[:id])
+  end
+
+  def create
+    product = Api::Product.create!(params[:product])
+    respond_with product
   end
 end
