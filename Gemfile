@@ -4,7 +4,8 @@ source 'http://gems.developers.stoliczku.pl'
 gem 'rails', '3.2.2'
 
 gem 'pg'
-gem "rtesseract", "~> 0.0.12"
+#gem 'ffi-inline', :git => 'https://github.com/meh/ruby-ffi-inline'
+gem 'rtesseract'
 gem 'carrierwave'
 
 group :development, :test do

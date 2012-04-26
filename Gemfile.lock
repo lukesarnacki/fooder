@@ -118,4 +118,4 @@ DEPENDENCIES
   pg
   rails (= 3.2.2)
   rspec-rails
-  rtesseract (~> 0.0.12)
+  rtesseract

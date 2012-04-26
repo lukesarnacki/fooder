@@ -4,7 +4,8 @@ class Label < ActiveRecord::Base
   before_create :content_ocr
 
   private
+
   def content_ocr
-    self.content = RTesseract.new(self.image_url).to_s
+    self.content = RTesseract.new(image.current_path, :lang => "pol")
   end
 end

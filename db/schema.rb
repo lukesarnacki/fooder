@@ -29,11 +29,11 @@ ActiveRecord::Schema.define(:version => 20120426031555) do
   end
 
   create_table "ingredient_names", :force => true do |t|
-    t.string   "name"
-    t.boolean  "main"
-    t.integer  "ingredient_id"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.string   "name",                             :null => false
+    t.boolean  "main",          :default => false, :null => false
+    t.integer  "ingredient_id",                    :null => false
+    t.datetime "created_at",                       :null => false
+    t.datetime "updated_at",                       :null => false
   end
 
   create_table "ingredients", :force => true do |t|
