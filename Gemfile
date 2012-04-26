@@ -5,6 +5,7 @@ gem 'rails', '3.2.2'
 
 gem 'pg'
 gem "rtesseract", "~> 0.0.12"
+gem 'carrierwave'
 
 group :development, :test do
   #gem 'linecache19', '0.5.13'
