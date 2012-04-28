@@ -1,5 +1,4 @@
 class Label < ActiveRecord::Base
-  attr_accessible :image
   mount_uploader :image, ImageUploader
   before_create :content_ocr
 
