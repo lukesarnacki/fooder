@@ -3,7 +3,7 @@ class ProductsController < ApplicationController
   respond_to :json, :xml
 
   def index
-    respond_with Api::Collection.new(Product.all, Product)
+    respond_with Api::Collection.new(Product.all, Api::Product).as_json
   end
 
   def show

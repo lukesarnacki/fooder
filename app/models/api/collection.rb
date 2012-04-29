@@ -7,10 +7,10 @@ class Api::Collection < SimpleDelegator
   end
 
   def as_json(*args)
-    map { |o| presenter_class.new(o).serializable_hash }
+    map { |o| presenter_class.new(o).as_json }
   end
 
-  def to_json(*args)
-    as_json(*args).to_json
-  end
+  #def to_json(*args)
+  #  as_json(*args).to_json
+  #end
 end
