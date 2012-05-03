@@ -5,7 +5,7 @@ gem 'rails', '3.2.2'
 
 gem 'pg'
 #gem 'ffi-inline', :git => 'https://github.com/meh/ruby-ffi-inline'
-gem 'rtesseract'
+gem 'rtesseract', :git => 'git@github.com:lukesarnacki/rtesseract.git'
 gem 'carrierwave'
 
 group :development, :test do

@@ -1,3 +1,10 @@
+GIT
+  remote: git@github.com:lukesarnacki/rtesseract.git
+  revision: 0d42eec773f99e69a0d8ee2c00fc01d9196d8ec0
+  specs:
+    rtesseract (0.0.12)
+      rmagick (>= 2.10.1)
+
 GEM
   remote: https://rubygems.org/
   remote: http://gems.developers.stoliczku.pl/
@@ -94,8 +101,6 @@ GEM
       activesupport (>= 3.0)
       railties (>= 3.0)
       rspec (~> 2.9.0)
-    rtesseract (0.0.12)
-      rmagick (>= 2.10.1)
     sprockets (2.1.2)
       hike (~> 1.2)
       rack (~> 1.0)
@@ -118,4 +123,4 @@ DEPENDENCIES
   pg
   rails (= 3.2.2)
   rspec-rails
-  rtesseract
+  rtesseract!
