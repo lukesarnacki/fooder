@@ -1,5 +1,6 @@
 FactoryGirl.define do
   factory :ingredient do
+    sequence(:number, 100) { |n| "E#{n}" }
     grade { rand(1..10) }
     factory :ingredient_with_names do
       ignore do
@@ -13,8 +14,7 @@ FactoryGirl.define do
   end
 
   factory :ingredient_name do
-    sequence(:name, 100) { |n| "E#{n}" }
-    association :ingredient
+    name {"#{Faker::Company.name}"}
     factory :main_ingredient_name do
       main true
     end

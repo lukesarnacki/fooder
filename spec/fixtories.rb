@@ -1,56 +1,40 @@
 # encoding: UTF-8
 
-Fixtories.define(:ingredient_name) do |f|
-
-  ###
-  f.create  :E339,
-            name: "E339",
-            main: true
-
-  f.create  :fosforan_monosodowy,
-            name: "Fosforan monosodowy"
-
-  f.create  :fosforan_disodowy,
-            name: "Fosforan disodowy"
-
-  f.create  :fosforan_trisodowy,
-            name: "Fosforan trisodowy"
-
-  ###
-  f.create  :E407,
-            name: "E407",
-            main: true
-
-  f.create  :E407a,
-            name: "E407a"
-
-  f.create  :kargen,
-            name: "Kargen"
-
-  f.create  :wodorost,
-            name: "Przetworzony wodorost morski Eucheuma"
-end
-
 Fixtories.define(:ingredient) do |f|
   f.create  :E339,
-            names: [
-              f.ingredient_name(:E339),
-              f.ingredient_name(:fosforan_monosodowy),
-              f.ingredient_name(:fosforan_disodowy),
-              f.ingredient_name(:fosforan_trisodowy)
-            ],
+            number: "E339",
             grade: 5,
             description: "Fosforany sodu to regulatory kwasowości i czynniki chelatujące (wiązanie jonów metali). Zapobiegają wysychaniu, regulują kwasowość proszków oraz zapobiegają zbrylaniu się. Zwiększają wydajność przeciwutleniaczy."
 
   f.create  :E407,
-            names: [
-              f.ingredient_name(:E407),
-              f.ingredient_name(:E407a),
-              f.ingredient_name(:wodorost),
-              f.ingredient_name(:kargen)
-            ],
+            number: "E407",
             grade: 5,
             description: "Środek zagęszczający i stabilizator."
+end
+
+Fixtories.define(:ingredient_name) do |f|
+
+  ###
+  f.create  :fosforan_monosodowy,
+            name: "Fosforan monosodowy",
+            ingredient: f.ingredient(:E339)
+
+  f.create  :fosforan_disodowy,
+            name: "Fosforan disodowy",
+            ingredient: f.ingredient(:E339)
+
+  f.create  :fosforan_trisodowy,
+            name: "Fosforan trisodowy",
+            ingredient: f.ingredient(:E339)
+
+  ###
+  f.create  :kargen,
+            name: "Kargen",
+            ingredient: f.ingredient(:E407)
+
+  f.create  :wodorost,
+            name: "Przetworzony wodorost morski Eucheuma",
+            ingredient: f.ingredient(:E407)
 end
 
 Fixtories.define(:company) do |f|
@@ -75,4 +59,3 @@ Fixtories.define(:product) do |f|
               f.ingredient(:E407)
             ]
 end
-

@@ -7,6 +7,7 @@ gem 'pg'
 #gem 'ffi-inline', :git => 'https://github.com/meh/ruby-ffi-inline'
 gem 'rtesseract', :git => 'git@github.com:lukesarnacki/rtesseract.git'
 gem 'carrierwave'
+gem 'nokogiri'
 
 group :development, :test do
   #gem 'linecache19', '0.5.13'
