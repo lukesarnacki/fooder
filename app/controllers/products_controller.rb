@@ -7,7 +7,7 @@ class ProductsController < ApplicationController
   end
 
   def show
-    respond_with Api::Product.find(params[:id])
+    respond_with Api::Product.find(params[:id]).as_json
   end
 
   def create

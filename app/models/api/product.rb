@@ -13,7 +13,8 @@ class Api::Product < Api::Presenter
       :id => id,
       :name => name,
       :description => description,
-      :company_name => company.name
-    } 
+      :company_name => company.name,
+      :ingredients => ingredients.as_json(:only => [:id, :number])
+    }
   end
 end
