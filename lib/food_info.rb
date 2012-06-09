@@ -49,7 +49,7 @@ class Crawler
 
             {
               :origin               => /[Pp]ochodzenie|[Oo]rigin/ ,
-              :description          => /[Ff]unkcje|[Ff]unction/ ,
+              :description          => /[Ff]unkcj|[Ff]unction/ ,
               :products_type        => /[Pp]rodukty|[Pp]roducts/ ,
               :daily_intake         => /[Dd]opuszczalne|[Dd]aily/ ,
               :side_effects         => /[Ee]fekty|[Ss]ide/ ,
