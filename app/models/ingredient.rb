@@ -5,6 +5,8 @@ class Ingredient < ActiveRecord::Base
   has_many :product_ingredients
   has_many :products, through: :product_ingredients
 
+  validates :number, :uniqueness => true
+
   #validates :names, length: { minimum: 1 }
 
   accepts_nested_attributes_for :names

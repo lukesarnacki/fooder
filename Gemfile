@@ -8,6 +8,8 @@ gem 'pg'
 gem 'rtesseract', :git => 'git@github.com:lukesarnacki/rtesseract.git'
 gem 'carrierwave'
 gem 'nokogiri'
+gem 'faraday'
+gem 'nibbler'
 
 group :development, :test do
   #gem 'linecache19', '0.5.13'
