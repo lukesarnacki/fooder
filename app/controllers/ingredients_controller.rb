@@ -3,7 +3,10 @@ class IngredientsController < ApplicationController
   respond_to :json, :xml
 
   def index
-    respond_with Api::Collection.new(Ingredient.order("number ASC").all, Api::Ingredient).as_json
+    respond_with Api::Collection.new(
+      Ingredient.order("substring(number from '\\d+')::integer ASC").all,
+      Api::Ingredient
+    ).as_json
   end
 
   def show
