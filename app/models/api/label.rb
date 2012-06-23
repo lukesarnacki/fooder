@@ -6,7 +6,8 @@ class Api::Label < Api::Presenter
 
   def as_json(*)
     {
-      :content => content
+      :content => content,
+      :ingredient_ids => ingredient_ids
     }
   end
 end

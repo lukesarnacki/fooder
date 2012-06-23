@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
-source 'http://gems.developers.stoliczku.pl'
 
 gem 'rails', '3.2.2'
 
@@ -10,6 +9,7 @@ gem 'carrierwave'
 gem 'nokogiri'
 gem 'faraday'
 gem 'nibbler'
+gem 'activerecord-postgres-array'
 
 group :development, :test do
   #gem 'linecache19', '0.5.13'
