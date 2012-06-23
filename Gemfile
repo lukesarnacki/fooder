@@ -4,12 +4,13 @@ gem 'rails', '3.2.2'
 
 gem 'pg'
 #gem 'ffi-inline', :git => 'https://github.com/meh/ruby-ffi-inline'
-gem 'rtesseract', :git => 'git@github.com:lukesarnacki/rtesseract.git'
+gem 'rtesseract', :git => 'https://github.com/lukesarnacki/rtesseract.git'
 gem 'carrierwave'
 gem 'nokogiri'
 gem 'faraday'
 gem 'nibbler'
 gem 'activerecord-postgres-array'
+gem 'unicorn'
 
 group :development, :test do
   #gem 'linecache19', '0.5.13'
