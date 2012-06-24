@@ -11,7 +11,7 @@ class Label < ActiveRecord::Base
 #   self.image = io
 # end
   def find_ingredients
-    self.content.scan(/\d{3,4}/).map do |number|
+    self.content.scan(/E\d{3,4}|E.\d{3,4}/).map do |number|
       Ingredient.where(["substring(number from '\\d+')::integer = ?", number])
     end.flatten.map(&:id).uniq
   end
